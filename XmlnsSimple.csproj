@@ -63,7 +63,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.80-ci.main.25271.32" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="9.0.80-ci.main.*" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 	</ItemGroup>
 
@@ -77,8 +77,8 @@
 
 	<!-- Enable XAML simplifications -->
 	<PropertyGroup>
-    <DefineConstants>$(DefineConstants);MauiAllowImplicitXmlnsDeclaration</DefineConstants>
-    <EnablePreviewFeatures>true</EnablePreviewFeatures>
-  </PropertyGroup>
+		<DefineConstants>$(DefineConstants);MauiAllowImplicitXmlnsDeclaration</DefineConstants>
+		<EnablePreviewFeatures>true</EnablePreviewFeatures>
+	</PropertyGroup>
 	
 </Project>
