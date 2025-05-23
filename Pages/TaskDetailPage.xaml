@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sf="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
-             xmlns:pageModel="clr-namespace:XmlnsSimple.PageModels"
-             xmlns:models="clr-namespace:XmlnsSimple.Models"
-             x:DataType="pageModel:TaskDetailPageModel"
+<ContentPage x:DataType="TaskDetailPageModel"
              x:Class="XmlnsSimple.Pages.TaskDetailPage"
              Title="Task">
 
@@ -21,31 +16,31 @@
     <Grid>
         <ScrollView>
             <VerticalStackLayout Spacing="{StaticResource LayoutSpacing}" Padding="{StaticResource LayoutPadding}">
-                <sf:SfTextInputLayout Hint="Task">
+                <SfTextInputLayout Hint="Task">
                     <Entry
                         Text="{Binding Title}"
                         SemanticProperties.Description="Title" />
-                </sf:SfTextInputLayout>
+                </SfTextInputLayout>
 
-                <sf:SfTextInputLayout Hint="Completed">
+                <SfTextInputLayout Hint="Completed">
                     <CheckBox
                         HorizontalOptions="End"
                         IsChecked="{Binding IsCompleted}"
                         SemanticProperties.Description="Status"
                         SemanticProperties.Hint="Indicates if this task is completed" />
-                </sf:SfTextInputLayout>
+                </SfTextInputLayout>
 
-                <sf:SfTextInputLayout 
+                <SfTextInputLayout 
                     IsVisible="{Binding IsExistingProject}" 
                     Hint="Project">
                     <Picker 
                         ItemsSource="{Binding Projects}"
-                        ItemDisplayBinding="{Binding Name, x:DataType=models:Project}"
+                        ItemDisplayBinding="{Binding Name, x:DataType=Project}"
                         SelectedItem="{Binding Project}"
                         SelectedIndex="{Binding SelectedProjectIndex}"
                         SemanticProperties.Description="Project"
                         SemanticProperties.Hint="Which project this task belongs to" />
-                </sf:SfTextInputLayout>
+                </SfTextInputLayout>
 
                 <Button 
                     HeightRequest="{OnIdiom 44, Desktop=60}"

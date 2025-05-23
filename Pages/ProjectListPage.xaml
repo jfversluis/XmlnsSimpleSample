@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:pageModels="clr-namespace:XmlnsSimple.PageModels"
-             xmlns:models="clr-namespace:XmlnsSimple.Models"
-             xmlns:controls="clr-namespace:XmlnsSimple.Pages.Controls"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Class="XmlnsSimple.Pages.ProjectListPage"
-             x:DataType="pageModels:ProjectListPageModel"
+<ContentPage x:Class="XmlnsSimple.Pages.ProjectListPage"
+             x:DataType="ProjectListPageModel"
              Title="Projects">
 
 
@@ -22,14 +16,14 @@
             Margin="{StaticResource LayoutPadding}" 
             Spacing="{StaticResource LayoutSpacing}">
             <BindableLayout.ItemTemplate>
-                <DataTemplate x:DataType="models:Project">
+                <DataTemplate x:DataType="Project">
                     <Border>
                         <VerticalStackLayout Padding="10">
                             <Label Text="{Binding Name}" FontSize="24" />
                             <Label Text="{Binding Description}" />
                         </VerticalStackLayout>
                         <Border.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding NavigateToProjectCommand, Source={RelativeSource AncestorType={x:Type pageModels:ProjectListPageModel}}, x:DataType=pageModels:ProjectListPageModel}" CommandParameter="{Binding .}"/>
+                            <TapGestureRecognizer Command="{Binding NavigateToProjectCommand, Source={RelativeSource AncestorType={x:Type ProjectListPageModel}}, x:DataType=ProjectListPageModel}" CommandParameter="{Binding .}"/>
                         </Border.GestureRecognizers>
                     </Border>
                 </DataTemplate>
@@ -37,7 +31,7 @@
         </VerticalStackLayout>
       </ScrollView>
 
-        <controls:AddButton 
+        <AddButton 
             Command="{Binding AddProjectCommand}" />
     </Grid>
 </ContentPage>
