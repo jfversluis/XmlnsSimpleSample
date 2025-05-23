@@ -95,14 +95,14 @@
                                     <VisualStateGroup x:Name="CommonStates">
                                         <VisualState x:Name="Normal">
                                             <VisualState.Setters>
-                                                <Setter Property="VisualElement.BackgroundColor" Value="Transparent"/>
+                                                <Setter Property="BackgroundColor" Value="Transparent"/>
                                                 <Setter TargetName="SelectedIndicator" Property="BoxView.IsVisible" Value="False"/>
                                             </VisualState.Setters>
                                         </VisualState>
                                         <VisualState x:Name="Selected">
                                             <VisualState.Setters>
-                                                <Setter Property="VisualElement.BackgroundColor" Value="Transparent"/>
-                                                <Setter Property="VisualElement.Background" Value="Transparent"/>
+                                                <Setter Property="BackgroundColor" Value="Transparent"/>
+                                                <Setter Property="Background" Value="Transparent"/>
                                                 <Setter TargetName="SelectedIndicator" Property="BoxView.IsVisible" Value="True"/>
                                             </VisualState.Setters>
                                         </VisualState>

@@ -11,24 +11,24 @@
     </ContentPage.Behaviors>
     <ContentPage.Resources>
         <Style x:Key="InvalidEntryStyle" TargetType="Entry">
-            <Setter Property="Entry.TextColor" Value="Red" />
+            <Setter Property="TextColor" Value="Red" />
         </Style>
 
         <Style TargetType="Entry">
-            <Setter Property="Entry.TextColor" Value="{AppThemeBinding Light={StaticResource DarkOnLightBackground}, Dark={StaticResource LightOnDarkBackground}}" />
-            <Setter Property="Entry.BackgroundColor" Value="Transparent" />
-            <Setter Property="Entry.FontFamily" Value="OpenSansRegular"/>
-            <Setter Property="Entry.FontSize" Value="{OnIdiom 16,Desktop=24}" />
-            <Setter Property="Entry.PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}" />
-            <Setter Property="Entry.MinimumHeightRequest" Value="44"/>
-            <Setter Property="Entry.MinimumWidthRequest" Value="44"/>
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkOnLightBackground}, Dark={StaticResource LightOnDarkBackground}}" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="FontFamily" Value="OpenSansRegular"/>
+            <Setter Property="FontSize" Value="{OnIdiom 16,Desktop=24}" />
+            <Setter Property="PlaceholderColor" Value="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}" />
+            <Setter Property="MinimumHeightRequest" Value="44"/>
+            <Setter Property="MinimumWidthRequest" Value="44"/>
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
                     <VisualStateGroup x:Name="CommonStates">
                         <VisualState x:Name="Normal" />
                         <VisualState x:Name="Disabled">
                             <VisualState.Setters>
-                                <Setter Property="Entry.TextColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray600}}" />
+                                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray300}, Dark={StaticResource Gray600}}" />
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
